@@ -1,0 +1,127 @@
+// ========================================
+// フォーム
+// ========================================
+
+.form {
+  &__group {
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__label {
+    display: block;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+    
+    &--required {
+      &::after {
+        content: '*';
+        color: #e74c3c;
+        margin-left: 4px;
+      }
+    }
+  }
+  
+  &__input,
+  &__textarea,
+  &__select {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    border: 2px solid $light-gray;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    color: $text-primary;
+    background: $white;
+    transition: all $transition-speed-fast $transition-easing;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+    }
+    
+    &::placeholder {
+      color: $gray;
+    }
+    
+    &--error {
+      border-color: #e74c3c;
+      
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+      }
+    }
+  }
+  
+  &__textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+  }
+  
+  &__select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-sm center;
+    padding-right: $spacing-xl;
+  }
+  
+  &__error {
+    display: block;
+    margin-top: $spacing-xs;
+    font-size: $font-size-sm;
+    color: #e74c3c;
+  }
+  
+  &__help {
+    display: block;
+    margin-top: $spacing-xs;
+    font-size: $font-size-sm;
+    color: $text-light;
+  }
+  
+  &__checkbox,
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    cursor: pointer;
+    
+    input {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    label {
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    margin-top: $spacing-xl;
+    
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// コンタクトフォーム専用
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+  background: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-md;
+}

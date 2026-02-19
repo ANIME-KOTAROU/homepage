@@ -1,0 +1,22 @@
+<header class="header" id="header">
+  <div class="header__container">
+    <%= link_to root_path, class: "header__logo" do %>
+      <span class="header__logo-icon">🌿</span>
+      <span>グリーンガーデン</span>
+    <% end %>
+    
+    <nav class="header__nav" id="navMenu">
+      <%= link_to "ホーム", root_path, class: "header__nav-item" %>
+      <%= link_to "会社紹介", about_path, class: "header__nav-item" %>
+      <%= link_to "サービス", "#{root_path}#services", class: "header__nav-item" %>
+      <%= link_to "施工事例", "#{root_path}#projects", class: "header__nav-item" %>
+      <%= link_to "お問い合わせ", new_contact_path, class: "header__cta" %>
+    </nav>
+    
+    <button class="header__hamburger" id="hamburger" aria-label="メニュー">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

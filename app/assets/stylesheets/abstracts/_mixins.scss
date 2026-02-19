@@ -1,0 +1,129 @@
+// ========================================
+// レスポンシブデザイン用Mixin
+// ========================================
+
+// メディアクエリ
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "sm" {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == "md" {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == "lg" {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == "xl" {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// ========================================
+// Flexbox Mixin
+// ========================================
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// ========================================
+// ボタンMixin
+// ========================================
+@mixin button-base {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  border-radius: $border-radius-md;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-speed-normal $transition-easing;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $box-shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ========================================
+// カードMixin
+// ========================================
+@mixin card {
+  background: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-sm;
+  padding: $spacing-lg;
+  transition: box-shadow $transition-speed-normal $transition-easing;
+  
+  &:hover {
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+// ========================================
+// セクションMixin
+// ========================================
+@mixin section-padding {
+  padding: $spacing-xxxl 0;
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-xl 0;
+  }
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @include respond-to("lg") {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// ========================================
+// アニメーションMixin
+// ========================================
+@mixin fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ========================================
+// テキストMixin
+// ========================================
+@mixin heading-base {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  line-height: 1.4;
+  margin-bottom: $spacing-md;
+}
+
+@mixin text-gradient {
+  background: linear-gradient(135deg, $primary-color, $primary-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

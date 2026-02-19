@@ -1,0 +1,43 @@
+<aside class="sidebar">
+  <!-- カテゴリー -->
+  <div class="sidebar__section">
+    <h3 class="sidebar__title">カテゴリー</h3>
+    <ul class="sidebar__list">
+      <li class="sidebar__list-item">
+        <%= link_to "庭園設計", "#" %>
+      </li>
+      <li class="sidebar__list-item">
+        <%= link_to "エクステリア", "#" %>
+      </li>
+      <li class="sidebar__list-item">
+        <%= link_to "植栽管理", "#" %>
+      </li>
+      <li class="sidebar__list-item">
+        <%= link_to "メンテナンス", "#" %>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- 最新の施工事例 -->
+  <div class="sidebar__section">
+    <h3 class="sidebar__title">最新の施工事例</h3>
+    <ul class="sidebar__list">
+      <li class="sidebar__list-item">
+        <%= link_to "和風庭園の造園工事", "#" %>
+      </li>
+      <li class="sidebar__list-item">
+        <%= link_to "モダンガーデン施工", "#" %>
+      </li>
+      <li class="sidebar__list-item">
+        <%= link_to "屋上緑化プロジェクト", "#" %>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- お問い合わせCTA -->
+  <div class="sidebar__cta">
+    <h3 class="sidebar__cta-title">お気軽にご相談ください</h3>
+    <p class="sidebar__cta-text">無料見積もり・ご相談承ります</p>
+    <%= link_to "お問い合わせ", new_contact_path, class: "sidebar__cta-button" %>
+  </div>
+</aside>

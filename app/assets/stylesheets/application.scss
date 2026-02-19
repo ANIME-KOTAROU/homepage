@@ -1,0 +1,25 @@
+// 造園会社ホームページ - メインスタイルシート
+
+// 1. Abstracts（変数・Mixin）
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// 2. Base（基本スタイル）
+@import "base/reset";
+@import "base/typography";
+@import "base/layout";
+
+// 3. Layout（レイアウト部品）
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+// 4. Components（再利用可能な部品）
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/animations";
+
+// 5. Pages（ページ固有のスタイル）
+@import "pages/top";
+@import "pages/contact";

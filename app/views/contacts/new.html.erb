@@ -1,0 +1,158 @@
+<% content_for :title, "お問い合わせ - グリーンガーデン" %>
+<% content_for :description, "造園・庭園設計のご相談はお気軽にお問い合わせください。お見積もりは無料です。" %>
+
+<div class="contact-page">
+  <!-- ヒーローセクション -->
+  <div class="contact-page__hero">
+    <div class="container">
+      <h1 class="contact-page__hero-title">お問い合わせ</h1>
+      <p class="contact-page__hero-subtitle">お気軽にご相談ください</p>
+    </div>
+  </div>
+  
+  <!-- メインコンテンツ -->
+  <div class="container">
+    <div class="contact-page__content">
+      <!-- お問い合わせフォーム -->
+      <div class="contact-form fade-in">
+        <h2 style="font-size: 28px; color: #2d5016; margin-bottom: 24px; text-align: center;">
+          お問い合わせフォーム
+        </h2>
+        <p style="text-align: center; color: #4a5045; margin-bottom: 32px;">
+          以下のフォームに必要事項をご記入の上、送信してください。<br>
+          担当者より折り返しご連絡いたします。
+        </p>
+        
+        <%= form_with model: @contact, local: true, class: "form" do |f| %>
+          <% if @contact.errors.any? %>
+            <div style="background: #ffe5e5; border: 2px solid #e74c3c; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+              <h3 style="color: #e74c3c; font-size: 18px; margin-bottom: 8px;">
+                <%= pluralize(@contact.errors.count, "件") %>のエラーがあります：
+              </h3>
+              <ul style="margin-left: 20px; color: #e74c3c;">
+                <% @contact.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          
+          <div class="form__group">
+            <%= f.label :name, "お名前", class: "form__label form__label--required" %>
+            <%= f.text_field :name, 
+                placeholder: "山田 太郎", 
+                class: "form__input #{'form__input--error' if @contact.errors[:name].any?}" %>
+            <% if @contact.errors[:name].any? %>
+              <span class="form__error"><%= @contact.errors[:name].first %></span>
+            <% end %>
+          </div>
+          
+          <div class="form__group">
+            <%= f.label :email, "メールアドレス", class: "form__label form__label--required" %>
+            <%= f.email_field :email, 
+                placeholder: "example@email.com", 
+                class: "form__input #{'form__input--error' if @contact.errors[:email].any?}" %>
+            <% if @contact.errors[:email].any? %>
+              <span class="form__error"><%= @contact.errors[:email].first %></span>
+            <% end %>
+            <span class="form__help">ご返信用のメールアドレスをご入力ください</span>
+          </div>
+          
+          <div class="form__group">
+            <%= f.label :phone, "電話番号", class: "form__label" %>
+            <%= f.telephone_field :phone, 
+                placeholder: "090-1234-5678", 
+                class: "form__input #{'form__input--error' if @contact.errors[:phone].any?}" %>
+            <% if @contact.errors[:phone].any? %>
+              <span class="form__error"><%= @contact.errors[:phone].first %></span>
+            <% end %>
+            <span class="form__help">任意：お急ぎの場合はご入力ください</span>
+          </div>
+          
+          <div class="form__group">
+            <%= f.label :subject, "件名", class: "form__label form__label--required" %>
+            <%= f.text_field :subject, 
+                placeholder: "庭園設計のご相談", 
+                class: "form__input #{'form__input--error' if @contact.errors[:subject].any?}" %>
+            <% if @contact.errors[:subject].any? %>
+              <span class="form__error"><%= @contact.errors[:subject].first %></span>
+            <% end %>
+          </div>
+          
+          <div class="form__group">
+            <%= f.label :message, "お問い合わせ内容", class: "form__label form__label--required" %>
+            <%= f.text_area :message, 
+                placeholder: "お問い合わせ内容をご記入ください。\n\n例：\n- ご希望のサービス内容\n- お庭の広さや状況\n- ご予算\n- ご希望の工事時期\nなど", 
+                class: "form__textarea #{'form__input--error' if @contact.errors[:message].any?}" %>
+            <% if @contact.errors[:message].any? %>
+              <span class="form__error"><%= @contact.errors[:message].first %></span>
+            <% end %>
+          </div>
+          
+          <div class="form__actions">
+            <%= f.submit "送信する", class: "btn btn--primary btn--large btn--full" %>
+            <%= link_to "キャンセル", root_path, class: "btn btn--outline btn--large btn--full" %>
+          </div>
+        <% end %>
+      </div>
+      
+      <!-- 会社情報 -->
+      <div class="contact-page__info fade-in animation-delay-2">
+        <h3 class="contact-page__info-title">その他のお問い合わせ方法</h3>
+        
+        <div class="contact-page__info-item">
+          <div class="contact-page__info-item-icon">📞</div>
+          <div class="contact-page__info-item-content">
+            <div class="contact-page__info-item-label">電話でのお問い合わせ</div>
+            <div class="contact-page__info-item-text">
+              <strong style="font-size: 24px; color: #2d5016;">0120-XXX-XXX</strong><br>
+              受付時間：平日 9:00〜18:00<br>
+              土日祝日もご対応可能な場合がございます
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-page__info-item">
+          <div class="contact-page__info-item-icon">📧</div>
+          <div class="contact-page__info-item-content">
+            <div class="contact-page__info-item-label">メールでのお問い合わせ</div>
+            <div class="contact-page__info-item-text">
+              <strong>info@green-garden.jp</strong><br>
+              24時間受付可能<br>
+              2営業日以内にご返信いたします
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-page__info-item">
+          <div class="contact-page__info-item-icon">📍</div>
+          <div class="contact-page__info-item-content">
+            <div class="contact-page__info-item-label">所在地</div>
+            <div class="contact-page__info-item-text">
+              〒XXX-XXXX<br>
+              東京都○○区○○ X-X-X<br>
+              グリーンガーデンビル 2F
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-page__info-item">
+          <div class="contact-page__info-item-icon">🕐</div>
+          <div class="contact-page__info-item-content">
+            <div class="contact-page__info-item-label">営業時間</div>
+            <div class="contact-page__info-item-text">
+              平日：9:00〜18:00<br>
+              土曜：10:00〜17:00<br>
+              定休日：日曜・祝日
+            </div>
+          </div>
+        </div>
+        
+        <!-- 地図プレースホルダー -->
+        <div class="contact-page__map">
+          <p>地図を表示（Google Maps等）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

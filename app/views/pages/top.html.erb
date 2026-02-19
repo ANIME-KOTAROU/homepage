@@ -1,0 +1,261 @@
+<% content_for :title, "プロの植木屋 - 庭木剪定・伐採・植木販売" %>
+<% content_for :description, "東京の植木屋専門店。庭木剪定、造園工事、伐採・伐根、植木販売まで幅広く対応。確かな技術と丁寧な仕事で、お庭を美しく保ちます。" %>
+
+<!-- ヒーローセクション -->
+<section class="hero">
+  <div class="hero__content fade-in">
+    <p class="hero__subtitle">プロの技術で、お庭を美しく</p>
+    <h1 class="hero__title">庭木のことなら<br>何でもお任せください</h1>
+    <p class="hero__description">
+      剪定から伐採、植木販売まで。<br>
+      確かな技術と豊富な経験で、お客様のお庭を最高の状態に保ちます。
+    </p>
+    <div class="hero__cta">
+      <%= link_to "無料相談のご予約", new_contact_path, class: "btn btn--primary btn--large" %>
+      <%= link_to "施工事例を見る", "#projects", class: "btn btn--outline btn--large" %>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span class="hero__scroll-icon">↓</span>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- 会社紹介セクション -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <h2 class="section__title fade-in">私たちについて</h2>
+    <p class="section__subtitle fade-in">植木のプロフェッショナル</p>
+    
+    <div class="about-section__content">
+      <div class="about-section__text fade-in">
+        <p class="about-section__text-lead">
+          一本一本の木に向き合い、お庭を美しく保つ。
+        </p>
+        <p class="about-section__text-description">
+          30年以上にわたり、植木一筋で培ってきた技術と経験があります。
+          庭木の剪定から造園工事、伐採・伐根、植木販売まで、お庭に関することなら何でもお任せください。
+          熟練の職人が、お客様のお庭を丁寧に手入れいたします。
+        </p>
+        
+        <div class="about-section__features">
+          <div class="about-section__feature">
+            <div class="about-section__feature-icon">✓</div>
+            <div class="about-section__feature-content">
+              <h4 class="about-section__feature-title">豊富な実績</h4>
+              <p class="about-section__feature-text">1,000件以上の施工実績</p>
+            </div>
+          </div>
+          
+          <div class="about-section__feature">
+            <div class="about-section__feature-icon">✓</div>
+            <div class="about-section__feature-content">
+              <h4 class="about-section__feature-title">確かな技術</h4>
+              <p class="about-section__feature-text">熟練の職人による丁寧な施工</p>
+            </div>
+          </div>
+          
+          <div class="about-section__feature">
+            <div class="about-section__feature-icon">✓</div>
+            <div class="about-section__feature-content">
+              <h4 class="about-section__feature-title">充実のアフター</h4>
+              <p class="about-section__feature-text">施工後も安心のサポート体制</p>
+            </div>
+          </div>
+          
+          <div class="about-section__feature">
+            <div class="about-section__feature-icon">✓</div>
+            <div class="about-section__feature-content">
+              <h4 class="about-section__feature-title">無料相談</h4>
+              <p class="about-section__feature-text">お見積もり・ご相談は無料</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-section__image fade-in animation-delay-2">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="造園作業の様子">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービスセクション -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <h2 class="section__title fade-in">サービス紹介</h2>
+    <p class="section__subtitle fade-in">植木のプロが対応します</p>
+    
+    <div class="services-section__grid">
+      <div class="card card--service fade-in animation-delay-1">
+        <div class="card__icon">✂️</div>
+        <h3 class="card__title">庭木剪定</h3>
+        <p class="card__description">
+          松・梅・桜など、あらゆる樹種の剪定に対応。熟練の職人が丁寧に仕上げます。定期メンテナンスもお任せください。
+        </p>
+      </div>
+      
+      <div class="card card--service fade-in animation-delay-2">
+        <div class="card__icon">🏗️</div>
+        <h3 class="card__title">造園工事</h3>
+        <p class="card__description">
+          お庭の新設、リフォーム、和風庭園の施工など。お客様のご要望に合わせた庭づくりをご提案いたします。
+        </p>
+      </div>
+      
+      <div class="card card--service fade-in animation-delay-3">
+        <div class="card__icon">🪓</div>
+        <h3 class="card__title">伐採・伐根</h3>
+        <p class="card__description">
+          大きくなりすぎた樹木の伐採、根の撤去まで対応。安全に配慮した作業で、お庭をすっきりさせます。
+        </p>
+      </div>
+      
+      <div class="card card--service fade-in animation-delay-4">
+        <div class="card__icon">🌲</div>
+        <h3 class="card__title">植木販売</h3>
+        <p class="card__description">
+          松・もみじ・桜など、選りすぐりの植木を販売。植え付けから管理方法までアドバイスいたします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 統計セクション -->
+<section class="section stats-section">
+  <div class="container">
+    <div class="stats-section__grid">
+      <div class="stats-section__item fade-in animation-delay-1">
+        <div class="stats-section__item-number">30+</div>
+        <div class="stats-section__item-label">年の実績</div>
+      </div>
+      
+      <div class="stats-section__item fade-in animation-delay-2">
+        <div class="stats-section__item-number">1,000+</div>
+        <div class="stats-section__item-label">施工実績</div>
+      </div>
+      
+      <div class="stats-section__item fade-in animation-delay-3">
+        <div class="stats-section__item-number">98%</div>
+        <div class="stats-section__item-label">顧客満足度</div>
+      </div>
+      
+      <div class="stats-section__item fade-in animation-delay-4">
+        <div class="stats-section__item-number">15名</div>
+        <div class="stats-section__item-label">熟練スタッフ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 施工事例セクション -->
+<section class="section projects-section" id="projects">
+  <div class="container">
+    <h2 class="section__title fade-in">施工事例</h2>
+    <p class="section__subtitle fade-in">これまでの実績をご紹介</p>
+    
+    <div class="projects-section__grid">
+      <div class="card card--project fade-in animation-delay-1">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600" alt="和風庭園" class="card__image">
+        <div class="card__content">
+          <span class="card__category">和風庭園</span>
+          <h3 class="card__title">伝統的な日本庭園</h3>
+          <p class="card__description">
+            枯山水を取り入れた本格的な和風庭園。石組みと植栽のバランスが美しい空間です。
+          </p>
+        </div>
+      </div>
+      
+      <div class="card card--project fade-in animation-delay-2">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="モダンガーデン" class="card__image">
+        <div class="card__content">
+          <span class="card__category">モダンガーデン</span>
+          <h3 class="card__title">都会的なデザイン庭園</h3>
+          <p class="card__description">
+            シンプルで洗練されたモダンスタイル。低メンテナンスで美しさを保ちます。
+          </p>
+        </div>
+      </div>
+      
+      <div class="card card--project fade-in animation-delay-3">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="ガーデニング" class="card__image">
+        <div class="card__content">
+          <span class="card__category">ガーデニング</span>
+          <h3 class="card__title">季節の花を楽しむ庭</h3>
+          <p class="card__description">
+            四季折々の花が咲き誇る、華やかなイングリッシュガーデンスタイルです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お客様の声セクション -->
+<section class="section testimonials-section" id="testimonials">
+  <div class="container">
+    <h2 class="section__title fade-in">お客様の声</h2>
+    <p class="section__subtitle fade-in">実際にご利用いただいたお客様から</p>
+    
+    <div class="testimonials-section__grid">
+      <div class="card card--testimonial fade-in animation-delay-1">
+        <p class="card__description">
+          想像以上の素晴らしい庭を作っていただきました。職人さんの丁寧な仕事ぶりと、細やかな気配りに感動しました。毎朝庭を眺めるのが楽しみです。
+        </p>
+        <div class="card__author">
+          <div class="card__author-avatar">A</div>
+          <div class="card__author-info">
+            <div class="card__author-name">Aさん</div>
+            <div class="card__author-role">東京都 / 戸建て住宅</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card card--testimonial fade-in animation-delay-2">
+        <p class="card__description">
+          相談から完成まで親身になって対応してくださいました。予算内で最大限の提案をしていただき、大変満足しています。アフターフォローも充実しています。
+        </p>
+        <div class="card__author">
+          <div class="card__author-avatar">B</div>
+          <div class="card__author-info">
+            <div class="card__author-name">Bさん</div>
+            <div class="card__author-role">神奈川県 / マンション</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card card--testimonial fade-in animation-delay-3">
+        <p class="card__description">
+          長年放置していた庭が見違えるようになりました。メンテナンスのアドバイスも丁寧で、自分でも手入れができるようになりました。ありがとうございます。
+        </p>
+        <div class="card__author">
+          <div class="card__author-avatar">C</div>
+          <div class="card__author-info">
+            <div class="card__author-name">Cさん</div>
+            <div class="card__author-role">千葉県 / 戸建て住宅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTAセクション -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-section__title fade-in">まずはお気軽にご相談ください</h2>
+    <p class="cta-section__description fade-in">
+      お見積もり・ご相談は無料です。<br>
+      お客様の理想の庭づくりをサポートいたします。
+    </p>
+    <div class="cta-section__buttons fade-in">
+      <%= link_to new_contact_path, class: "btn btn--accent btn--large" do %>
+        📧 お問い合わせフォーム
+      <% end %>
+      <a href="tel:0120-XXX-XXX" class="btn btn--outline btn--large" style="color: white; border-color: white;">
+        📞 電話で相談する
+      </a>
+    </div>
+  </div>
+</section>

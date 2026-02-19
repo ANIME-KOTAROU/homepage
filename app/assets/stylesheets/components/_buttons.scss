@@ -1,0 +1,85 @@
+// ========================================
+// ボタン
+// ========================================
+
+.btn {
+  @include button-base;
+  
+  // プライマリーボタン
+  &--primary {
+    background: linear-gradient(135deg, $primary-color, $primary-light);
+    color: $white;
+    
+    &:hover {
+      background: linear-gradient(135deg, $primary-light, $primary-dark);
+    }
+  }
+  
+  // セカンダリーボタン
+  &--secondary {
+    background: $secondary-color;
+    color: $white;
+    
+    &:hover {
+      background: $secondary-light;
+    }
+  }
+  
+  // アウトラインボタン
+  &--outline {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+  
+  // アクセントボタン
+  &--accent {
+    background: $accent-color;
+    color: $white;
+    
+    &:hover {
+      background: darken($accent-color, 10%);
+    }
+  }
+  
+  // 大きいボタン
+  &--large {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-lg;
+  }
+  
+  // 小さいボタン
+  &--small {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+  }
+  
+  // 全幅ボタン
+  &--full {
+    width: 100%;
+    display: block;
+  }
+  
+  // アイコン付きボタン
+  &--with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+  
+  // 無効化
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+// ========================================
+// お問い合わせページ
+// ========================================
+
+.contact-page {
+  background: $bg-secondary;
+  
+  &__hero {
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.95), rgba(74, 124, 44, 0.9)),
+                url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600') center/cover;
+    color: $white;
+    text-align: center;
+    padding: $spacing-xxxl 0 $spacing-xxl;
+    margin-bottom: $spacing-xxl;
+    
+    &-title {
+      font-size: $font-size-h1;
+      margin-bottom: $spacing-md;
+      color: $white;
+    }
+    
+    &-subtitle {
+      font-size: $font-size-xl;
+      opacity: 0.95;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+    margin-bottom: $spacing-xxl;
+    
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__info {
+    @include card;
+    
+    &-title {
+      font-size: $font-size-h3;
+      color: $primary-color;
+      margin-bottom: $spacing-lg;
+    }
+    
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      gap: $spacing-md;
+      margin-bottom: $spacing-lg;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, $primary-color, $primary-light);
+        @include flex-center;
+        color: $white;
+        font-size: $font-size-xl;
+      }
+      
+      &-content {
+        flex: 1;
+      }
+      
+      &-label {
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: $spacing-xs;
+        font-size: $font-size-lg;
+      }
+      
+      &-text {
+        color: $text-secondary;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  &__map {
+    margin-top: $spacing-lg;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    height: 300px;
+    background: $light-gray;
+    @include flex-center;
+    color: $text-light;
+  }
+}
+
+// サンクスページ
+.thanks-page {
+  background: $bg-secondary;
+  min-height: calc(100vh - #{$header-height});
+  @include flex-center;
+  padding: $spacing-xxl $spacing-md;
+  
+  &__content {
+    max-width: 600px;
+    text-align: center;
+    background: $white;
+    padding: $spacing-xxl;
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow-lg;
+  }
+  
+  &__icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto $spacing-lg;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $primary-color, $primary-light);
+    @include flex-center;
+    color: $white;
+    font-size: 48px;
+  }
+  
+  &__title {
+    font-size: $font-size-h2;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__message {
+    color: $text-secondary;
+    line-height: 1.8;
+    margin-bottom: $spacing-xl;
+  }
+  
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,82 @@
+<% content_for :title, "会社紹介 - グリーンガーデン" %>
+<% content_for :description, "グリーンガーデンの会社概要、理念、スタッフ紹介をご覧いただけます。" %>
+
+<div class="contact-page">
+  <div class="contact-page__hero">
+    <div class="container">
+      <h1 class="contact-page__hero-title">会社紹介</h1>
+      <p class="contact-page__hero-subtitle">About Us</p>
+    </div>
+  </div>
+  
+  <section class="section about-section">
+    <div class="container">
+      <h2 class="section__title fade-in">グリーンガーデンについて</h2>
+      
+      <div class="about-section__content">
+        <div class="about-section__text fade-in">
+          <h3 style="font-size: 28px; color: #2d5016; margin-bottom: 24px;">私たちの理念</h3>
+          <p class="about-section__text-description">
+            グリーンガーデンは、1990年の創業以来、「自然と人が調和する空間づくり」を理念に、
+            数多くのお客様の理想の庭を実現してきました。
+          </p>
+          <p class="about-section__text-description">
+            庭は、ただの装飾ではありません。そこは、家族が集い、季節を感じ、
+            心を癒す大切な空間です。私たちは、お客様一人ひとりのライフスタイルや
+            想いに寄り添い、長く愛される庭をデザインいたします。
+          </p>
+          
+          <h3 style="font-size: 28px; color: #2d5016; margin: 48px 0 24px;">会社概要</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #e8ebe4;">
+              <th style="padding: 16px 0; text-align: left; width: 150px; color: #2d5016;">会社名</th>
+              <td style="padding: 16px 0;">グリーンガーデン株式会社</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e8ebe4;">
+              <th style="padding: 16px 0; text-align: left; color: #2d5016;">設立</th>
+              <td style="padding: 16px 0;">1990年4月</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e8ebe4;">
+              <th style="padding: 16px 0; text-align: left; color: #2d5016;">代表取締役</th>
+              <td style="padding: 16px 0;">山田 太郎</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e8ebe4;">
+              <th style="padding: 16px 0; text-align: left; color: #2d5016;">所在地</th>
+              <td style="padding: 16px 0;">〒XXX-XXXX 東京都○○区○○ X-X-X</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e8ebe4;">
+              <th style="padding: 16px 0; text-align: left; color: #2d5016;">事業内容</th>
+              <td style="padding: 16px 0;">
+                造園設計・施工<br>
+                エクステリア工事<br>
+                植栽管理・メンテナンス<br>
+                庭園リフォーム
+              </td>
+            </tr>
+            <tr>
+              <th style="padding: 16px 0; text-align: left; color: #2d5016;">従業員数</th>
+              <td style="padding: 16px 0;">15名</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="about-section__image fade-in animation-delay-2">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800" alt="会社の様子">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTAセクション -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title fade-in">お気軽にご相談ください</h2>
+      <p class="cta-section__description fade-in">
+        お見積もり・ご相談は無料です
+      </p>
+      <div class="cta-section__buttons fade-in">
+        <%= link_to "お問い合わせ", new_contact_path, class: "btn btn--accent btn--large" %>
+      </div>
+    </div>
+  </section>
+</div>

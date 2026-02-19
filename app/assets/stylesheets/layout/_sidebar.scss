@@ -1,0 +1,113 @@
+// ========================================
+// サイドバー
+// ========================================
+
+.sidebar {
+  width: $sidebar-width;
+  padding: $spacing-lg;
+  
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+    margin-top: $spacing-lg;
+  }
+  
+  &__section {
+    @include card;
+    margin-bottom: $spacing-lg;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__title {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $light-gray;
+  }
+  
+  &__list {
+    list-style: none;
+    
+    &-item {
+      margin-bottom: $spacing-sm;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      a {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        padding: $spacing-xs;
+        color: $text-secondary;
+        transition: all $transition-speed-fast $transition-easing;
+        border-radius: $border-radius-sm;
+        
+        &:hover {
+          background: $bg-secondary;
+          color: $primary-color;
+          padding-left: $spacing-sm;
+        }
+        
+        &::before {
+          content: '›';
+          font-size: $font-size-lg;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+  
+  &__cta {
+    background: linear-gradient(135deg, $primary-color, $primary-light);
+    color: $white;
+    padding: $spacing-lg;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    
+    &-title {
+      font-size: $font-size-h5;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-sm;
+    }
+    
+    &-text {
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-md;
+      opacity: 0.9;
+    }
+    
+    &-button {
+      @include button-base;
+      background: $white;
+      color: $primary-color;
+      width: 100%;
+      font-weight: $font-weight-bold;
+      
+      &:hover {
+        background: $accent-color;
+        color: $white;
+      }
+    }
+  }
+}
+
+// サイドバー付きレイアウト
+.layout-with-sidebar {
+  display: flex;
+  gap: $spacing-xl;
+  
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column;
+  }
+  
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+}

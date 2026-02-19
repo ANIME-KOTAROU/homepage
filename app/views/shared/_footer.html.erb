@@ -1,0 +1,77 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__main">
+      <!-- 会社情報 -->
+      <div class="footer__about">
+        <div class="footer__about-logo">
+          <span class="footer__about-logo-icon">🌿</span>
+          <span>グリーンガーデン</span>
+        </div>
+        <p class="footer__about-description">
+          創業以来、お客様の夢の庭づくりをサポートしてきました。<br>
+          豊かな緑と快適な空間をご提供いたします。
+        </p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social-link" aria-label="LINE">💬</a>
+        </div>
+      </div>
+      
+      <!-- サービス -->
+      <div class="footer__section">
+        <h3 class="footer__section-title">サービス</h3>
+        <ul class="footer__links">
+          <li><%= link_to "庭園設計・施工", "#{root_path}#services" %></li>
+          <li><%= link_to "エクステリア工事", "#{root_path}#services" %></li>
+          <li><%= link_to "植栽管理", "#{root_path}#services" %></li>
+          <li><%= link_to "造園メンテナンス", "#{root_path}#services" %></li>
+        </ul>
+      </div>
+      
+      <!-- 会社案内 -->
+      <div class="footer__section">
+        <h3 class="footer__section-title">会社案内</h3>
+        <ul class="footer__links">
+          <li><%= link_to "会社概要", about_path %></li>
+          <li><%= link_to "施工事例", "#{root_path}#projects" %></li>
+          <li><%= link_to "お客様の声", "#{root_path}#testimonials" %></li>
+          <li><%= link_to "採用情報", "#" %></li>
+        </ul>
+      </div>
+      
+      <!-- お問い合わせ -->
+      <div class="footer__contact">
+        <h3 class="footer__section-title">お問い合わせ</h3>
+        <div class="footer__contact-item">
+          <div class="footer__contact-item-icon">📞</div>
+          <div class="footer__contact-item-content">
+            <div class="footer__contact-item-label">電話</div>
+            <div class="footer__contact-item-text">0120-XXX-XXX<br>平日 9:00〜18:00</div>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <div class="footer__contact-item-icon">📧</div>
+          <div class="footer__contact-item-content">
+            <div class="footer__contact-item-label">メール</div>
+            <div class="footer__contact-item-text">info@green-garden.jp</div>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <div class="footer__contact-item-icon">📍</div>
+          <div class="footer__contact-item-content">
+            <div class="footer__contact-item-label">所在地</div>
+            <div class="footer__contact-item-text">〒XXX-XXXX<br>東京都○○区○○ X-X-X</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        &copy; <%= Time.current.year %> グリーンガーデン株式会社 All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>

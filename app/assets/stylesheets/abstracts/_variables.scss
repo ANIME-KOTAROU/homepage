@@ -1,0 +1,101 @@
+// ========================================
+// 色の定義（植木屋 - 自然な緑と黒）
+// ========================================
+
+// プライマリーカラー（緑系 - 植木屋らしい）
+$primary-color: #2d5016;        // 深緑（松葉色）
+$primary-light: #4a7c2c;        // 若葉色
+$primary-dark: #1a3209;          // 濃緑
+
+// セカンダリーカラー（自然系）
+$secondary-color: #6b5544;       // 樹皮の色（ブラウン）
+$secondary-light: #8b7355;       // 土の色
+$accent-color: #d4af37;          // 黄金（イチョウ色）
+
+// ニュートラルカラー
+$white: #ffffff;                 // 純白
+$off-white: #fafaf8;             // 生成り色
+$light-gray: #e8e8e8;            // 薄墨色
+$gray: #999999;                  // 灰色
+$dark-gray: #4a4a4a;             // 濃灰色
+$black: #1a1a1a;                 // 墨黒
+
+// 背景色（白系）
+$bg-primary: $white;             // 白背景
+$bg-secondary: $off-white;       // 生成り色背景
+
+// テキスト色（黒のみ）
+$text-primary: $black;           // 黒文字
+$text-secondary: $black;         // 黒文字
+$text-light: $dark-gray;         // 濃灰色
+
+// ========================================
+// フォント
+// ========================================
+$font-family-base: 'Noto Sans JP', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+$font-family-heading: 'Noto Serif JP', 'Times New Roman', serif;
+
+// フォントサイズ
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 28px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-h6: 18px;
+
+// フォントウェイト
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// ========================================
+// スペーシング
+// ========================================
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+$spacing-xxxl: 96px;
+
+// ========================================
+// レイアウト
+// ========================================
+$max-width: 1200px;
+$header-height: 80px;
+$footer-height: 300px;
+$sidebar-width: 280px;
+
+// ========================================
+// ブレークポイント
+// ========================================
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// ========================================
+// ボーダー・シャドウ
+// ========================================
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+// ========================================
+// トランジション
+// ========================================
+$transition-speed-fast: 0.2s;
+$transition-speed-normal: 0.3s;
+$transition-speed-slow: 0.5s;
+$transition-easing: ease-in-out;

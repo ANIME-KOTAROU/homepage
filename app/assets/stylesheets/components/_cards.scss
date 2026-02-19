@@ -1,0 +1,161 @@
+// ========================================
+// カード
+// ========================================
+
+.card {
+  @include card;
+  
+  &__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__category {
+    display: inline-block;
+    padding: $spacing-xs $spacing-sm;
+    background: $bg-secondary;
+    color: $primary-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius-sm;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__title {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__description {
+    color: $text-secondary;
+    margin-bottom: $spacing-md;
+    line-height: 1.6;
+  }
+  
+  &__meta {
+    display: flex;
+    gap: $spacing-md;
+    font-size: $font-size-sm;
+    color: $text-light;
+    margin-bottom: $spacing-md;
+    
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+    }
+  }
+  
+  &__link {
+    color: $primary-color;
+    font-weight: $font-weight-medium;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    transition: gap $transition-speed-fast $transition-easing;
+    
+    &:hover {
+      gap: $spacing-sm;
+    }
+    
+    &::after {
+      content: '→';
+    }
+  }
+  
+  // サービスカード
+  &--service {
+    text-align: center;
+    
+    .card__icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto $spacing-md;
+      background: linear-gradient(135deg, $primary-color, $primary-light);
+      border-radius: 50%;
+      @include flex-center;
+      color: $white;
+      font-size: 36px;
+    }
+  }
+  
+  // 施工事例カード
+  &--project {
+    overflow: hidden;
+    
+    &:hover {
+      .card__image {
+        transform: scale(1.05);
+      }
+    }
+    
+    .card__image {
+      transition: transform $transition-speed-slow $transition-easing;
+      margin-bottom: 0;
+      height: 280px;
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
+    }
+    
+    .card__content {
+      padding: $spacing-lg;
+    }
+  }
+  
+  // お客様の声カード
+  &--testimonial {
+    position: relative;
+    padding-top: $spacing-xl;
+    
+    &::before {
+      content: '"';
+      position: absolute;
+      top: $spacing-sm;
+      left: $spacing-lg;
+      font-size: 64px;
+      color: $primary-light;
+      opacity: 0.2;
+      font-family: $font-family-heading;
+      line-height: 1;
+    }
+    
+    .card__author {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+      margin-top: $spacing-lg;
+      padding-top: $spacing-md;
+      border-top: 1px solid $light-gray;
+      
+      &-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $bg-secondary;
+        @include flex-center;
+        font-size: $font-size-h5;
+        font-weight: $font-weight-bold;
+        color: $primary-color;
+      }
+      
+      &-info {
+        flex: 1;
+      }
+      
+      &-name {
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: 2px;
+      }
+      
+      &-role {
+        font-size: $font-size-sm;
+        color: $text-light;
+      }
+    }
+  }
+}
