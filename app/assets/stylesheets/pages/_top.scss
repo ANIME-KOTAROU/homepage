@@ -10,8 +10,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(45, 80, 22, 0.9), rgba(74, 124, 44, 0.85)),
-              url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600') center/cover;
+  background:
+    linear-gradient(
+      rgba(153, 153, 153, 0.6),
+      rgba(153, 153, 153, 0.6)
+    ),
+    url("heroTop.jpg") center / cover no-repeat;
   color: $white;
   text-align: center;
   overflow: hidden;
@@ -34,6 +38,7 @@
   }
   
   &__subtitle {
+    color: $white;
     font-size: $font-size-xl;
     font-weight: $font-weight-medium;
     margin-bottom: $spacing-md;
@@ -42,6 +47,7 @@
   }
   
   &__title {
+    color: $white;
     font-size: 72px;
     font-family: $font-family-heading;
     font-weight: $font-weight-bold;
@@ -55,6 +61,7 @@
   }
   
   &__description {
+    color: $white;
     font-size: $font-size-xl;
     margin-bottom: $spacing-xxl;
     line-height: 1.8;
@@ -233,6 +240,7 @@
     font-size: $font-size-xl;
     margin-bottom: $spacing-xxl;
     opacity: 0.95;
+    color: $white;
   }
   
   &__buttons {
